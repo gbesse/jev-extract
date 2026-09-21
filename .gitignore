@@ -1,0 +1,7 @@
+# Purpose: Exclude dependencies and generated local extraction data.
+node_modules/
+.local/
+local-data/
+*.sqlite*
+dist/
+.jev-cache*

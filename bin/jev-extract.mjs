@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+// Purpose: Estimate or run typed extraction on a text file with offline fake support.
+import{readFile,writeFile}from'node:fs/promises';import{estimate,extract,FakeJev}from'../src/index.mjs';const[a,schemaPath,file,...rest]=process.argv.slice(2);try{const schema=JSON.parse(await readFile(schemaPath,'utf8')),text=await readFile(file,'utf8');if(a==='estimate')console.log(estimate(schema,text));else if(a==='run'){const out=rest[rest.indexOf('--out')+1];await writeFile(out,JSON.stringify(await extract(schema,text,new FakeJev()))+'\n');}else throw Error('Usage: jev-extract estimate|run schema.json file --out records.jsonl')}catch(e){console.error(`jev-extract: ${e.message}`);process.exit(1)}

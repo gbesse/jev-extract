@@ -1,0 +1,2 @@
+// Purpose: Syntax-check every JavaScript module.
+import{readdirSync,statSync}from'node:fs';import{join}from'node:path';import{execFileSync}from'node:child_process';function walk(d){for(const n of readdirSync(d)){const p=join(d,n);if(n==='node_modules'||n==='.git')continue;statSync(p).isDirectory()?walk(p):n.endsWith('.mjs')&&execFileSync(process.execPath,['--check',p]);}}walk('.');console.log('JavaScript syntax checks passed');

@@ -1,0 +1,2 @@
+// Purpose: Offline extraction with synthetic answers.
+import{extract,FakeJev}from'../src/index.mjs';const schema={fields:{email:{kind:'candidate',description:'Contact',candidate_pattern:'[\\w.+-]+@[\\w.-]+\\.[A-Za-z]{2,}'},urgent:{kind:'flag',description:'Urgent'}}};const fake=new FakeJev({email:{value:'demo@example.test',probability:.93},urgent:{value:true,probability:.81}});console.log(JSON.stringify({source:'synthetic fixture',...await extract(schema,'Urgent: demo@example.test',fake)},null,2));
