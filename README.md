@@ -46,3 +46,12 @@ Independent project; not affiliated with TypeSafe AI. [API documentation](https:
 ## Contrôle d’adoption · Adoption check · Comprobación de adopción
 
 [Français : essayer un cas concret](examples/adoption-check.md) · [English: try a concrete case](examples/adoption-check.md) · [Español: pruebe un caso concreto](examples/adoption-check.md).
+
+
+## 2026-11-05 — FR / EN / ES
+
+FR : Le découpage UTF-16 conserve les paires de substitution et refuse les tailles invalides (2..1000000). Les candidats exposent désormais les offsets du document entier, vérifiables par slice ; pas de changement de langue des données.
+
+EN: UTF-16 chunking preserves surrogate pairs and rejects invalid sizes (2..1000000). Candidates now expose whole-document offsets verifiable by slice; data language is preserved.
+
+ES: La división UTF-16 conserva pares sustitutos y rechaza tamaños inválidos (2..1000000). Los candidatos exponen posiciones del documento completo verificables con slice; se conserva idioma de datos.

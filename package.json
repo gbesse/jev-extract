@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/jev-extract",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Packed typed extraction by deterministic candidates and parallel Jev questions.",
   "type": "module",
   "exports": {
