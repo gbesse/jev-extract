@@ -55,3 +55,12 @@ FR : Le découpage UTF-16 conserve les paires de substitution et refuse les tail
 EN: UTF-16 chunking preserves surrogate pairs and rejects invalid sizes (2..1000000). Candidates now expose whole-document offsets verifiable by slice; data language is preserved.
 
 ES: La división UTF-16 conserva pares sustitutos y rechaza tamaños inválidos (2..1000000). Los candidatos exponen posiciones del documento completo verificables con slice; se conserva idioma de datos.
+
+
+## 2026-11-12 — FR / EN / ES
+
+FR : Conserver les résultats scalaires any/all/majority dans le record final d’extraction.
+
+EN: Preserve scalar any/all/majority aggregation results in the final extraction record.
+
+ES: Conservar resultados escalares any/all/majority en registro final de extracción.
